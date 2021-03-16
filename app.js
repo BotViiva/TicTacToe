@@ -1,5 +1,8 @@
 const boxes = Array.from(document.getElementsByClassName('box'));
-console.log(boxes);
+
+const O_TEXT = "0";
+const X_TEXT = "X";
+let currentPlayer = O_TEXT;
 
 const drawBoard = () => {
     boxes.forEach((box, index) => {
