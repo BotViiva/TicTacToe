@@ -73,16 +73,20 @@ const playerHasWon = () => {
             console.log(`${currentPlayer} wins horizontally.`);
             return true;
         };
+        if (spaces[2] === currentPlayer && spaces[6] === currentPlayer) {
+            console.log(`${currentPlayer} wins diagonally.`);
+            return true;
+        };
     };
 };
 
 const restart = () => {
     spaces.forEach((space, index) => {
         spaces[index] = null;
-    })
+    });
     boxes.forEach(box => {
         box.innerText = '';
-    })
+    });
     playText.innerText = `Let's play!`;
     currentPlayer = O_TEXT;
 }
